@@ -9,7 +9,8 @@ SCREEN_SIZE = [600, 450]
 
 cordx = input()
 cordy = input()
-span = input()
+span1 = input()
+span2 = input()
 
 class Example(QWidget):
     def __init__(self):
@@ -18,7 +19,7 @@ class Example(QWidget):
         self.initUI()
 
     def getImage(self):
-        map_request = f"https://static-maps.yandex.ru/1.x/?ll={cordx},{cordy}&spn={span},0.2&l=map"
+        map_request = f"https://static-maps.yandex.ru/1.x/?ll={cordx},{cordy}&spn={span1},{span2}&l=map"
         response = requests.get(map_request)
 
         if not response:
